@@ -1,0 +1,14 @@
+<title>Yelp Clone</title>
+
+<h1>Home Page</h1>
+
+  <% @restaurants.each do |restaurant| %>
+    <ul>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    </ul>
+  <% end %>
+
+  <%= link_to "Create New Restaurant", new_restaurant_path, class: "btn btn-primary" %>
+
+
+
